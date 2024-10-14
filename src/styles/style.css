@@ -86,10 +86,29 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-right: 10px;
+  width: 100px;
+  height: 50px;
 }
 
 .delete-button:hover {
   background-color: #ff1a1a;
+}
+
+.archive-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+.archive-button:hover {
+  background-color: #0062ff;
 }
 
 @media (min-width: 600px) {
@@ -145,4 +164,10 @@ textarea {
 .container {
   width: 65%;
   margin: 0% 17%;
+}
+
+.note-date {
+  font-size: 14px;
+  color: #999;
+  margin-top: 20px;
 }

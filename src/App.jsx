@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
+import { getInitialData } from './utils';
 
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const initialNotes = getInitialData();
+    setNotes(initialNotes);
+  }, []);
 
   const addNote = (note) => {
     setNotes([...notes, note]);
