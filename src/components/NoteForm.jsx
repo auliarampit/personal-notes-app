@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState('');
@@ -8,7 +9,7 @@ const NoteForm = ({ addNote }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newNote = {
-      id: +new Date(),
+      id: uuidv4(),
       title,
       body,
       archived: false,

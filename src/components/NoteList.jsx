@@ -2,8 +2,8 @@ import React from 'react';
 import NoteItem from './NoteItem';
 
 const NoteList = ({ notes, deleteNote, archiveNote }) => {
-  const archivedNotes = notes.filter(note => note.isArchived);
-  const activeNotes = notes.filter(note => !note.isArchived);
+  const archivedNotes = notes?.filter(note => note.isArchived);
+  const activeNotes = notes?.filter(note => !note.isArchived);
 
   return (
     <div className='note-list'>
